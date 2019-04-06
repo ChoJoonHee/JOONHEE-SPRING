@@ -38,11 +38,11 @@ public class ArticleService {
 	 */
 	public void addArticle() {
 		Article article = new Article();
-		article.setArticleId("내가 실력이 없지 가오도 없지...");
-		article.setTitle("This is modified title.");
-		article.setContent("조주느이이이이이이이이이이");
-		article.setUserId("1");
-		article.setName("내가 실력이 없지 가오도 없지...");
+		article.setArticleId("내가 실력이 없지 가오도f 없지...");
+		article.setTitle("This is modified tiftle.");
+		article.setContent("조주느이이이이이이이f이이이");
+		article.setUserId("9");
+		article.setName("내가실력없지 가오도 없지...re");
 		if(articleDao.addArticle(article) > 0)
 			System.out.println("HELLOOOOOO");
 		else

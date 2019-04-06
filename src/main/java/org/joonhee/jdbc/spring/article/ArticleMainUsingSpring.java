@@ -12,7 +12,7 @@ public class ArticleMainUsingSpring {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(
-				"spring-jdbc.xml");
+				"article_component.xml");
 		ArticleService articleService = context.getBean("articleService", ArticleService.class);
 		context.close();
 
