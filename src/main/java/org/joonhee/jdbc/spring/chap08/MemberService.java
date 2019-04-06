@@ -42,10 +42,10 @@ public class MemberService {
 
 	public void insertMember() {
 		Member member = new Member();
-		member.setEmail("beautybao@naver.com");
-		member.setPassword("1234aㅇsdasd");
-		member.setName("slaxer8888ㅁㅁㅁ8888");
+		member.setEmail("ffffffffffffff");
+		member.setPassword("f");
+		member.setName("fffffffff");
 		memberDao.insert(member);
-		logger.debug("내가 실력이없지 가오도 없지...");
+		logger.debug("내가 실력이없 가오도 없지...");
 	}
 }

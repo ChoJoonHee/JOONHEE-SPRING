@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
  * 
  * @author Jacob
  */
-@Repository("memberDao")
+@Repository("MemberDao")
 public class MemberDaoImplUsingSpringJdbc implements MemberDao {
 
 	static final String SELECT_BY_EMAIL = "SELECT memberId, email, name FROM member WHERE email=?";
