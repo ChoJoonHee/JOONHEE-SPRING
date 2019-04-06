@@ -31,19 +31,17 @@ public class MemberMain {
 		// db.url 프라퍼티 값으로 데이터소스 초기화
 		DataSource dataSource = new MariaDbDataSource(
 				props.getProperty("db.url"));
-
 		// dataSource를 jdbcTemplate에 넣는다. (Injection)
-		JdbcTemplate jdbcTemplate = new JdbcTemplate();
-		jdbcTemplate.setDataSource(dataSource);
+				JdbcTemplate jdbcTemplate = new JdbcTemplate();
+				jdbcTemplate.setDataSource(dataSource);
 
-		// jdbcTemplate을 memberDao에 넣는다. (Injection)
-		MemberDaoImplUsingSpringJdbc memberDao = new MemberDaoImplUsingSpringJdbc();
-		memberDao.setJdbcTemplate(jdbcTemplate);
+				// jdbcTemplate을 memberDao에 넣는다. (Injection)
+				MemberDaoImplUsingSpringJdbc memberDao = new MemberDaoImplUsingSpringJdbc();
+				memberDao.setJdbcTemplate(jdbcTemplate);
 
-		// memberDao를 memberService에 넣는다. (Injection)
-		MemberService memberService = new MemberService();
-		memberService.setMemberDao(memberDao);
-
+				// memberDao를 memberService에 넣는다. (Injection)
+				MemberService memberService = new MemberService();
+				memberService.setMemberDao(memberDao);
 		// 비즈니스 메서드 실행
 		memberService.insertMember();
 		memberService.selectAll();
