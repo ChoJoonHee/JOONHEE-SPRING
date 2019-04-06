@@ -7,7 +7,7 @@
 7         http://www.springframework.org/schema/context 
 8         http://www.springframework.org/schema/context/spring-context.xsd"> 
 9 
- 
+ 	<!-- db.properties 파일을 읽는다. -->
 10 	<context:property-placeholder 
 11 		location="classpath:db.properties" /> 
 12 
@@ -22,15 +22,4 @@
 19 		class="org.springframework.jdbc.core.JdbcTemplate"> 
 20 		<property name="dataSource" ref="dataSource" /> 
 21 	</bean> 
-22 
- 
-23 	<bean id="articleDao" 
-24 		class=org.joonhee.jdbc.spring.article.ArticleDaoImplUsingSpringJdbc"> 
-25 		<property name="jdbcTemplate" ref="jdbcTemplate" /> 
-26 	</bean> 
-27 
- 
-28 	<bean id="articleService" class="org.joonhee.jdbc.spring.article.ArticleService"> 
-29 		<property name="articleDao" ref="articleDao" /> 
-30 	</bean> 
 31 </beans> 
